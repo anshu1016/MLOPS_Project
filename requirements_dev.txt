@@ -8,10 +8,9 @@ pytest
 
 -e .   # For the local package
 
-# dev enviornments:-
-
-pytest==7.13
-tox==3.25.1 ## creating testing enviornment
-black==22.8.0 # linting tool
-flake8=5.0.4 # linting tool
-mypy=0.971
+# dev environments:
+pytest==7.1.3
+tox==3.25.1  # testing environment
+black==22.8.0  # linting tool
+flake8==5.0.4  # linting tool
+mypy==0.971
