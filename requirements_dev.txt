@@ -1,0 +1,17 @@
+pymongo
+pymongo[srv]
+dnspython
+pandas
+numpy
+ensure
+pytest
+
+-e .   # For the local package
+
+# dev enviornments:-
+
+pytest==7.13
+tox==3.25.1 ## creating testing enviornment
+black==22.8.0 # linting tool
+flake8=5.0.4 # linting tool
+mypy=0.971
