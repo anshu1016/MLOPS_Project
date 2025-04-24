@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: PyDB_Connector
+Version: 0.0.4
+Summary: A Python package for connecting with databases.
+Home-page: https://github.com/anshu1016/MLOPS_Project
+Author: anshu1016
+Author-email: arunshukla98710@gmail.com
+Project-URL: Bug Tracker, https://github.com/anshu1016/MLOPS_Project/issues
+Description-Content-Type: text/markdown
+Requires-Dist: pymongo
+Requires-Dist: dnspython
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: ensure
+Dynamic: author
+Dynamic: author-email
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: summary

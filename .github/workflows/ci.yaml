@@ -2,27 +2,21 @@ name: Python application
 
 on:
   push:
-    branches:
-      - main
-    paths-ignore:
-      - README.md
-
+    branches: [main]
+    paths-ignore: [README.md]
   pull_request:
-    branches:
-      - main
-    paths-ignore:
-      - README.md
+    branches: [main]
+    paths-ignore: [README.md]
 
 permissions:
   contents: read
 
 jobs:
   build:
-
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest] 
+        os: [ubuntu-latest, windows-latest]
         python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
 
     steps:
@@ -33,22 +27,10 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Install dependencies
-      shell: bash
+    - name: Install dependencies and Tox
       run: |
-        echo "Python version: $(python --version)"
-        echo "Running on OS: $RUNNER_OS"
+        python -m pip install --upgrade pip
+        pip install tox tox-gh-actions
 
-        # Safely update pip depending on OS
-        if [[ "$RUNNER_OS" == "Windows" ]]; then
-          echo "Using fixed pip version for Windows"
-          python -m pip install pip==23.2.1
-        else
-          python -m pip install --upgrade pip
-        fi
-
-        pip install flake8 pytest tox tox-gh-actions
-        pip install -r requirements.txt
-
-    - name: Test with tox
+    - name: Run Tox tests
       run: tox
