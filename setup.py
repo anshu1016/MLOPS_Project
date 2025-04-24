@@ -1,6 +1,6 @@
 # from setuptools import setup, find_packages
 
-# __version__ = "0.0.4"
+# __version__ = "1.0.0"
 # REPO_NAME = "MLOPS_Project"
 # PKG_NAME = "PyDB_Connector"
 # AUTHOR_USER_NAME = "anshu1016"
